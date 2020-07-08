@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script type="module">
+    import {App} from "/src/App.js";
+    import {Form} from "/src/Form.js";
+    </script>
+<body>
+    
+    <script type="module" src="src/App.js"></script>
+    <script type="module">
+        import {App} from "/src/App.js";
+        import {Form} from "/src/Form.js";
+        const app = new App();
+        console.log(app.render());
+        document.querySelector(".form").innerHTML = app.render();
+    </script>
+    
+    <div class = "form"></div>
+    <button class="click" >Click me</button>
+</body>
+</html>
