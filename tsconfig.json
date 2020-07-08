@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {
     "compilerOptions": {
         "sourceMap": true,
@@ -11,4 +12,19 @@
     "include": [
         "src/**/*"
     ]
+=======
+{
+    "compilerOptions": {
+        "sourceMap": true,
+        "noImplicitAny": true,
+        "target": "es6",
+        "allowJs": true,
+        "moduleResolution": "Node",
+        "strict": true,
+        "removeComments": true
+    },
+    "include": [
+        "src/**/*"
+    ]
+>>>>>>> 81c1e8b7dad46ca580f2f566df871b9916e660a6
 }
