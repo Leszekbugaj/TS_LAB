@@ -12,12 +12,12 @@ export class Form {
         this.Fields.forEach(field => {
             result.push([field.Name,field.GetValue()]);
         })
-        console.table(result);
+
         return result;
         
     }
 
-    Render(): void {
+    Render(key: string = ""): void {
         const div = document.createElement('div');
         document.body.appendChild(div);
         

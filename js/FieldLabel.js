@@ -7,14 +7,13 @@ export class FieldLabel {
         this.Label = label;
         this.Value = value;
     }
-    GetValue() {
-        return this.TypeField.innerText;
-    }
     Render(div) {
         this.TypeField.setAttribute('name', this.Name);
         this.TypeField.innerText = this.Label;
-        div.appendChild(document.createElement('br'));
         div.appendChild(this.TypeField);
+    }
+    GetValue() {
+        return this.TypeField.innerText;
     }
 }
 //# sourceMappingURL=FieldLabel.js.map

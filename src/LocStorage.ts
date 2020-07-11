@@ -112,13 +112,14 @@ import { DataStorage } from "./DataStorage.js";
 
 export class LocStorage implements DataStorage {
 
-    SaveForm(newDocumentId: string){
+    
+    SaveDocumentInList(newDocumentId: string){
 
-        let docsIds = localStorage.getItem('DocumentsIds');
+        let docsIds = localStorage.GetItem('DocumentsIds');
         if(docsIds === null){
             let docsIds:string[] = new Array();
             docsIds.push(newDocumentId);
-            localStorage.setItem('DocumentsIds', JSON.stringify(docsIds));
+            localStorage.SetItem('DocumentsIds', JSON.stringify(docsIds));
         }
         else {
             let docsIds: string[] = JSON.parse(localStorage.getItem('DocumentsIds')!);
@@ -130,7 +131,7 @@ export class LocStorage implements DataStorage {
         const newDocumentId = 'Document-'.concat(Date.now().toString());
         console.log(doc);
         localStorage.setItem(newDocumentId,JSON.stringify(doc));
-        this.SaveForm(newDocumentId);
+        this.SaveDocumentInList(newDocumentId);
 
         return newDocumentId;
 
@@ -141,7 +142,7 @@ export class LocStorage implements DataStorage {
             return JSON.parse(documentFromStorage);
         }
     }
-    DeleteDocument(Id: string){
+    RemoveDocument(Id: string){
         localStorage.removeItem(Id);
         let docsList = this.GetDocuments();
         let docIndex = docsList.indexOf(Id);
@@ -149,10 +150,18 @@ export class LocStorage implements DataStorage {
         localStorage.setItem('DocumentsIds', JSON.stringify(docsList));
     }
     GetDocuments(): string[] {
-        let docs = localStorage.getItem('DocumentsIds');
-        if(docs != null){
-        let parsedDocs = JSON.parse(docs);
-        return parsedDocs as string[];
-        } else return new Array();
+        // let docs = localStorage[0]
+        // if(docs != null){
+        // let parsedDocs = JSON.parse(docs);
+        // return parsedDocs as string[];
+        // } else return new Array();
+
+        const result: string[] = [];
+        for(let i = 0;  i < localStorage.length;i++) {
+            result.push(localStorage.key(i) as string);
+        }
+        
+        
+        return result;
 }
 }

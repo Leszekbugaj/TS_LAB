@@ -2,7 +2,7 @@ import { FieldType } from "./FieldType.js";
 import { FieldLabel } from "./FieldLabel.js";
 export class EmailField {
     constructor(name, label = "", value = "") {
-        this.Type = FieldType.DateField;
+        this.Type = FieldType.EmailField;
         this.TypeField = document.createElement('input');
         this.LabelField = new FieldLabel("", "");
         this.Name = name;
@@ -11,6 +11,9 @@ export class EmailField {
         this.LabelField.Label = this.Label;
         this.LabelField.Name = this.Name;
     }
+    GetValue() {
+        return this.TypeField.value;
+    }
     Render(div) {
         this.LabelField.Render(div);
         this.TypeField.setAttribute('type', 'email');
@@ -18,9 +21,6 @@ export class EmailField {
         this.TypeField.setAttribute('value', this.Value);
         div.appendChild(this.TypeField);
         div.appendChild(document.createElement('br'));
-    }
-    GetValue() {
-        return this.TypeField.value;
     }
 }
 //# sourceMappingURL=EmailField.js.map

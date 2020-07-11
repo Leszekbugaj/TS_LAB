@@ -19,6 +19,9 @@ export class EmailField implements Field {
         this.LabelField.Name = this.Name;
     }
     
+    GetValue(): string {
+        return this.TypeField.value;
+    }
     
     Render(div: HTMLDivElement): void {
         this.LabelField.Render(div);
@@ -30,7 +33,5 @@ export class EmailField implements Field {
         
         }
         
-        GetValue(): string {
-            return this.TypeField.value;
-        }
+        
 }

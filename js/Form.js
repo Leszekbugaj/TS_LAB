@@ -8,13 +8,11 @@ export class Form {
         this.Fields.forEach(field => {
             result.push([field.Name, field.GetValue()]);
         });
-        console.table(result);
         return result;
     }
-    Render() {
+    Render(key = "") {
         const div = document.createElement('div');
         document.body.appendChild(div);
-        div.appendChild(document.createElement('br'));
         this.Fields.forEach((field) => {
             field.Render(div);
         });

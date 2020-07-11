@@ -20,8 +20,6 @@ export class App {
         this.form.Fields.push(new CheckboxField("yes", "Tak"));
         this.form.Fields.push(new CheckboxField("no", "Nie"));
         this.form.Fields.push(new TextAreaField("comments", "Uwagi"));
-        document.body.innerHTML += this.Render();
-        console.log(this.Render());
     }
     Render() {
         this.form.Render();
