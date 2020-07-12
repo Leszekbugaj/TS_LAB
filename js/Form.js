@@ -8,6 +8,7 @@ export class Form {
         this.Fields.forEach(field => {
             result.push([field.Name, field.GetValue()]);
         });
+        console.table(result);
         return result;
     }
     Render(key = "") {

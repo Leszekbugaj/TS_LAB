@@ -12,7 +12,7 @@ export class Form {
         this.Fields.forEach(field => {
             result.push([field.Name,field.GetValue()]);
         })
-
+        console.table(result);
         return result;
         
     }
@@ -30,14 +30,14 @@ export class Form {
         const saveButton = document.createElement('button');
         saveButton.innerText = "Zapisz";
         saveButton.addEventListener('click',() => (new LocStorage()).SaveDocument(this.Fields));
-        saveButton.addEventListener('click', ()=>
-        window.location.assign("/index.html"));
+        saveButton.addEventListener('click', ()=> window.location.assign("/index.html"));
+        
         
         
         const cancelButton = document.createElement('button');
         cancelButton.textContent = 'Anuluj';
-        cancelButton.addEventListener('click', ()=>
-        window.location.assign("/index.html"));
+        cancelButton.addEventListener('click', ()=> window.location.assign("/index.html"));
+        
 
         div.appendChild(saveButton);
         div.appendChild(cancelButton);

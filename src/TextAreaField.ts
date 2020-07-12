@@ -7,7 +7,7 @@ export class TextAreaField implements Field {
 
     Name: string;
     Label: string;
-    Type: FieldType = FieldType.DateField;
+    Type: FieldType = FieldType.TextAreaField;
     Value: string;
     TypeField: HTMLTextAreaElement = document.createElement('textarea');
     LabelField: FieldLabel = new FieldLabel("","");

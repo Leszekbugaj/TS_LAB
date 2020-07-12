@@ -10,7 +10,7 @@ export class FieldLabel implements Field{
     Value: string;
     
 
-    constructor(name: string, label: string = "", setBR: boolean = false, value: string = "") {
+    constructor(name: string, label: string = "" , value: string = "") {
         this.Name = name;
         this.Label = label;
         this.Value = value;

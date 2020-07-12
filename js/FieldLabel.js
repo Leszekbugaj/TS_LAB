@@ -1,6 +1,6 @@
 import { FieldType } from "./FieldType.js";
 export class FieldLabel {
-    constructor(name, label = "", setBR = false, value = "") {
+    constructor(name, label = "", value = "") {
         this.Type = FieldType.FieldLabel;
         this.TypeField = document.createElement('label');
         this.Name = name;

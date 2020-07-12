@@ -29,7 +29,7 @@ export class App {
     
 
 
-    this.form.Fields.push(new FieldLabel("choice","Czy Preferujesz e-learning?",true));
+    this.form.Fields.push(new FieldLabel("choice","Czy Preferujesz e-learning?"));
     this.form.Fields.push(new CheckboxField("yes","Tak"));
     this.form.Fields.push(new CheckboxField("no","Nie"));
     

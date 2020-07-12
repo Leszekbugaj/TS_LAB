@@ -9,15 +9,16 @@ export class SelectField implements Field {
     Label: string;
     Type: FieldType = FieldType.SelectField;
     Value: string;
-    Options: SelectOptionField[];
+    Options: SelectOptionField[] = [];
     TypeField: HTMLSelectElement = document.createElement('select');
     LabelField: FieldLabel = new FieldLabel("","");
+    JsonOption: string = "";
 
-    constructor(name: string, label: string ="", options: SelectOptionField[] = [], value: string = "") {
+    constructor(name: string, label: string ="",  value: string = "") {
         this.Name = name;
         this.Label = label;
         this.Value = value; 
-        this.Options = options;
+        
         this.LabelField.Label = this.Label;
         this.LabelField.Name = this.Name;
     }

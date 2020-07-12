@@ -1,14 +1,15 @@
 import { FieldType } from "./FieldType.js";
 import { FieldLabel } from "./FieldLabel.js";
 export class SelectField {
-    constructor(name, label = "", options = [], value = "") {
+    constructor(name, label = "", value = "") {
         this.Type = FieldType.SelectField;
+        this.Options = [];
         this.TypeField = document.createElement('select');
         this.LabelField = new FieldLabel("", "");
+        this.JsonOption = "";
         this.Name = name;
         this.Label = label;
         this.Value = value;
-        this.Options = options;
         this.LabelField.Label = this.Label;
         this.LabelField.Name = this.Name;
     }

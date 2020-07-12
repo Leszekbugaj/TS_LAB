@@ -1,9 +1,10 @@
+import { FieldType } from "./FieldType.js";
 import { FieldLabel } from "./FieldLabel.js";
 export class CheckboxField {
     constructor(name, label = "", value = "") {
+        this.Type = FieldType.CheckboxField;
         this.TypeField = document.createElement('input');
         this.LabelField = new FieldLabel("", "");
-        this.Type = "";
         this.Name = name;
         this.Value = value;
         this.Label = label;

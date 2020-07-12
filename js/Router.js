@@ -1,5 +1,5 @@
 export class Router {
-    static GetParam() {
+    static getParam() {
         const query = window.location.search.substr(1);
         const urlParams = new URLSearchParams(query);
         const id = urlParams.get('id');

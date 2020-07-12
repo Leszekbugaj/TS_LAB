@@ -16,7 +16,7 @@ export class App {
         select.AddOption(new SelectOptionField("iie", "Informatyka i ekonometria", "iie"));
         select.AddOption(new SelectOptionField("e", "Ekonometria", "e"));
         this.form.Fields.push(select);
-        this.form.Fields.push(new FieldLabel("choice", "Czy Preferujesz e-learning?", true));
+        this.form.Fields.push(new FieldLabel("choice", "Czy Preferujesz e-learning?"));
         this.form.Fields.push(new CheckboxField("yes", "Tak"));
         this.form.Fields.push(new CheckboxField("no", "Nie"));
         this.form.Fields.push(new TextAreaField("comments", "Uwagi"));

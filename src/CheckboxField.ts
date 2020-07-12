@@ -8,6 +8,7 @@ export class CheckboxField implements Field {
 
     Name: string;
     Label: string;
+    Type: FieldType = FieldType.CheckboxField;
     TypeField: HTMLInputElement = document.createElement('input');
     Value: string;
     LabelField: FieldLabel = new FieldLabel("","");
@@ -20,7 +21,7 @@ export class CheckboxField implements Field {
         this.LabelField.Name = this.Name;
         
     }
-    Type: any = "";
+    
 
     Render(div: HTMLDivElement): void {  
     div.appendChild(document.createElement('br'));      
